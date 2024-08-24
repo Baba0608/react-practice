@@ -7,7 +7,7 @@ import Card from "./Card";
 
 const ExpandCollapse = () => {
   return (
-    <div className="container">
+    <div className="mt-3">
       {arr.map((item) => (
         <Card key={item.name} details={item} />
       ))}

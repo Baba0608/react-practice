@@ -10,14 +10,17 @@ const Card = ({ details }) => {
   const { name, items } = details;
 
   return (
-    <div className="items">
-      <div className="title" onClick={toggle}>
+    <div className="flex flex-col mb-1">
+      <div className="bg-gray-400 px-1 py-2" onClick={toggle}>
         {name}
       </div>
-      <div className={`items-list ${isExpand ? "collapse" : "expand"}`}>
-        {items.map((item) => (
-          <div key={item}>{item}</div>
-        ))}
+      <div>
+        {isExpand &&
+          items.map((item) => (
+            <div key={item} className="bg-gray-300 px-1 py-2">
+              {item}
+            </div>
+          ))}
       </div>
     </div>
   );
