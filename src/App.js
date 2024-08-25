@@ -11,6 +11,7 @@ import ExpandCollapse from "./components/Expand-collapse/ExpandCollapse";
 import Home from "./components/Life-cycle/Home";
 import Updating from "./components/Life-cycle/Updating";
 import Theme from "./components/dark-mode/Theme";
+import Welcome from "./components/context-example/WelcomeComp";
 
 const AppLayout = () => {
   const [light, setLight] = useState(true);
@@ -50,6 +51,12 @@ const AppLayout = () => {
               Theme
             </button>
           </Link>
+
+          <Link to="/welcome">
+            <button className="border border-black px-3 py-1 dark:text-white dark:border-white">
+              Welcome
+            </button>
+          </Link>
         </div>
 
         <div className="flex justify-center items-center mt-3 flex-col">
@@ -86,6 +93,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/theme",
         element: <Theme />,
+      },
+      {
+        path: "/welcome",
+        element: <Welcome />,
       },
     ],
   },
